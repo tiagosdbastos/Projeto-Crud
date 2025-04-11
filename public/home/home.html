@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="home.css" />
+  <title>Página de gerenciamento</title>
+  <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <img src="../imgs/Botifalho.png" alt="">
+    <hr class="linha" />
+  </header>
+  <div class="conteudo-geral">
+    <aside class="filtros">
+      <h3>Filtros</h3>
+  
+      <div class="filtro-item">
+        <label for="filtro-tipo">Tipo:</label>
+        <input type="text" id="filtro-tipo" placeholder="Ex: perfume" />
+      </div>
+  
+      <div class="filtro-item">
+        <label for="filtro-situacao">Situação:</label>
+        <select id="filtro-situacao">
+          <option value="">Todos</option>
+          <option value="Habilitado">Habilitado</option>
+          <option value="Desabilitado">Desabilitado</option>
+        </select>
+      </div>
+  
+      <div class="filtro-item">
+        <label for="preco-min">Preço mínimo:</label>
+        <input type="number" id="preco-min" min="0" step="0.01" />
+      </div>
+  
+      <div class="filtro-item">
+        <label for="preco-max">Preço máximo:</label>
+        <input type="number" id="preco-max" min="0" step="0.01" />
+      </div>
+  
+      <button onclick="aplicarFiltros()">Aplicar Filtros</button>
+  
+      <hr style="margin: 20px 0; border: none; border-top: 1px solid #ccc;" />
+  
+      <button type="button" onclick="logout()" class="logout">Logout</button>
+    </aside>
+  
+    <main>
+      <div class="novo-produto-wrapper">
+        <button type="button" onclick="novoProduto()" class="novo-produto">Novo Produto</button>
+      </div>
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Tipo</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Situação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-produtos">
+            <!-- Os produtos vão aparecer aqui via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  
+
+  <form id="form-produto" class="form">
+    <p id="heading">Novo Produto</p>
+
+    <div class="field">
+      <input autocomplete="off" id="nome" placeholder="Nome do produto" class="input-field" type="text" />
+    </div>
+
+    <div class="field">
+      <input autocomplete="off" id="tipo" placeholder="Tipo (ex: creme, perfume...)" class="input-field" type="text" />
+    </div>
+
+    <div class="field">
+      <input autocomplete="off" id="preco" placeholder="Preço" class="input-field" type="number" step="0.01" />
+    </div>
+
+    <div class="field">
+      <input autocomplete="off" id="quantidade" placeholder="Quantidade" class="input-field" type="number" />
+    </div>
+
+    <div class="field">
+      <select id="situacao" class="input-field">
+        <option value="" disabled selected>Situação</option>
+        <option value="Habilitado">Habilitado</option>
+        <option value="Desabilitado">Desabilitado</option>
+      </select>
+    </div>
+
+    <div class="btn">
+      <button type="button" class="button2" onclick="salvarProduto()">Salvar Produto</button>
+      <button type="button" class="button1" onclick="cancelarProduto()">Cancelar</button>
+    </div>
+  </form>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore-compat.js"></script>
+
+  <script src="../firebaseInit.js"></script>
+  <script src="../auth-guard.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

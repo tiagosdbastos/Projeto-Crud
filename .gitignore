@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Firebase config
+firebaseInit.js
+.env
+.firebase/
+
+# Node (caso use futuramente)
+node_modules/
+
+# VSCode configs
+.vscode/
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Pasta inútil
+bkp/

@@ -1,0 +1,104 @@
+header {
+    text-align: center;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    background-color: #faeee7;
+    border-radius: 25px;
+    width: 300px;
+    margin: auto;
+
+}
+
+
+#heading {
+    text-align: center;
+    color: #33272a;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.field {
+    border: solid 1px black;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #160f0f;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.btn [disabled]{
+    opacity: 0.7;
+}
+.btn [enabled]{
+    opacity: 1;
+}
+
+.button1 {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    border: solid 2px rgb(143, 21, 64);
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #f1416b;
+    color: white;
+}
+
+.button1:hover {
+    background-color: #ce2950;
+    color: white;
+}
+
+.button2 {
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 150px;
+    border: solid 2px rgb(143, 21, 64);
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #f1416b;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #ce2950;
+    color: white;
+}
+
+.button3 {
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    color: #f1416b;
+    transition: 0.2s;
+}
+.button3:disabled{
+    color: black;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img style="width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;" src="../imgs/Botifalho.png" alt="">
+    </header>
+    <form class="form">
+        <p id="heading">Registrar</p>
+        <div class="field">
+
+            <input autocomplete="off" id="email" placeholder="Email" class="input-field" type="text" onchange="onChangeEmail()">
+        </div>
+        <div class="field">
+            <input placeholder="Senha" id="senha" class="input-field" type="password" onchange="onChangePassword()">
+        </div>
+        <div class="field">
+            <input placeholder="Confirme a senha" id="Csenha" class="input-field" type="password" onchange="onChangeCPassword()">
+        </div>
+        
+        <div class="btn">
+           
+            <button type="button" class="button2" disabled onclick="register()" id="regB">Registrar-se</button>
+            <button type="button" class="button1" disabled id="logar" onclick="login()">Entrar</button>
+        </div>
+        
+    </form>
+
+    <!-- SDKs do Firebase -->
+<script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-auth-compat.js"></script>
+
+<!-- Inicializa o Firebase primeiro -->
+<script src="../firebaseInit.js"></script>
+
+<!-- Outros scripts que dependem do Firebase -->
+<script src="../script.js"></script>
+<script src="../validations.js"></script>
+<script src="../loading.js"></script>
+<script src="register.js"></script>
+
+</body>
+
+</html>
